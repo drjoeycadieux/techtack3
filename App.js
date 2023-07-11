@@ -1,20 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+
+// components
+import HeaderModule from './src/components/HeaderModule';
+
+// utils
+import SharingModule from './src/utils/SharingModule';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <HeaderModule />
+      <Text style={styles.text}>
+        Techtack Technologies | Most Advanced Platform From Developers.
+      </Text>
+      <SharingModule />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: 0,
   },
+  text: {
+    padding: 8,
+    textAlign: 'center',
+    color: '#B4B7BD',
+    paddingTop: 45,
+    fontSize: 26,
+    fontWeight: 'bold',
+  }
 });

@@ -4,11 +4,11 @@
     "slug": "techtack3",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/main.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "image": "./assets/logo.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
@@ -19,12 +19,17 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/main.png"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/main.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "de17371f-74c1-4180-9f9c-2fc1bbe9e6b3"
+      }
+    },
+    "owner": "joey-cadieux"
   }
 }
