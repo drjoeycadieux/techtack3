@@ -1,33 +1,24 @@
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react-native';
 
-// components
-import HeaderModule from './src/components/HeaderModule';
+// react navigation
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-// utils
-import SharingModule from './src/utils/SharingModule';
+//screens
+import Home from './src/screens/Home';
+import Settings from './src/screens/Settings';
 
-export default function App() {
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <HeaderModule />
-      <Text style={styles.text}>
-        Techtack Technologies | Most Advanced Platform From Developers.
-      </Text>
-      <SharingModule />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Settings" component={Settings} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    padding: 0,
-  },
-  text: {
-    padding: 8,
-    textAlign: 'center',
-    color: '#B4B7BD',
-    paddingTop: 45,
-    fontSize: 26,
-    fontWeight: 'bold',
-  }
-});
+export default App;
