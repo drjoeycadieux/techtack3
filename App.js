@@ -10,7 +10,8 @@ import Settings from './src/screens/Settings';
 
 const Stack = createStackNavigator();
 
-const App = () => {
+
+export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -18,7 +19,5 @@ const App = () => {
         <Stack.Screen name="Settings" component={Settings} />
       </Stack.Navigator>
     </NavigationContainer>
-  );
-};
-
-export default App;
+  )
+}
